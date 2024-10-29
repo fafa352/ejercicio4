@@ -1,0 +1,61 @@
+ul {
+  list-style: none;
+  font-size: 0; }
+  ul ul {
+    position: absolute;
+    display: none; }
+    ul ul li {
+      display: block; }
+  ul li:hover {
+    background-color: aquamarine; }
+    ul li:hover ul {
+      display: block;
+      background-color: aquamarine; }
+  ul li a {
+    color: white;
+    text-decoration: none; }
+
+li {
+  display: inline-block;
+  width: 23%;
+  position: relative;
+  font-size: 14px; }
+
+header {
+  background-color: black; }
+
+.contBordes {
+  border: solid 3px black; }
+
+h1 {
+  color: red;
+  border: solid 2px aqua; }
+
+/*Maps*/
+/*Se suelen usar cuando tenemos varios elementos con una leve diferencia*/
+/*Ciclo - Each*/
+.cont1 {
+  height: 100px;
+  background-color: blue; }
+
+.cont2 {
+  height: 100px;
+  background-color: violet; }
+
+.cont3 {
+  height: 100px;
+  background-color: yellow; }
+
+.cont4, .cont5 {
+  height: 150px;
+  background-color: aqua; }
+
+/*Extend - Herencia*/
+.cont5 {
+  border-bottom: solid 4px red; }
+
+/*Mixin*/
+.contFoto {
+  height: 400px;
+  width: 350px;
+  border: solid 4px red; }
