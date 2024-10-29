@@ -1,27 +1,20 @@
 ul{
     list-style: none;
     font-size: 0;
-
-    ul{
-        position: absolute;
-        display: none;
+    ba
 
         li{
             display: block;
-        }
-    }
+            display: inline-block;
 
+        }
     li{
         &:hover{
-            background-color: aquamarine;
-            ul{
-                display: block;
-                background-color: aquamarine;
-            }
+            background-color: #2C3E50;
         }
 
         a{
-            color: white;
+            color: #ECF0F1;
             text-decoration: none;
         }
     }
@@ -29,68 +22,18 @@ ul{
 
 li{
     display: inline-block;
-    width: 23%;
+    width: 32.45%;
     position: relative;
     font-size: 14px;
+    justify-content: center;
+    text-align: center;
 }
-
-$colorTitulo: red;
-$borderTitulo: solid 2px aqua;
-
 header{
-    background-color: black;
+    background-color: #4B4B4B;
 }
 
-.contBordes{
-    border: solid 3px black;
-}
 
-h1{
-    color: $colorTitulo;
-    border: $borderTitulo;
-}
-
-/*Maps*/
-/*Se suelen usar cuando tenemos varios elementos con una leve diferencia*/
-$coloresDivs:(
-    1: blue,
-    2: violet,
-    3: yellow,
-);
-
-/*Ciclo - Each*/
-@each $num, $color in $coloresDivs{
-    .cont#{$num}{
-        height: 100px;
-        background-color: $color;
-    }
-}
-
-$contColores:(
-    secElectro: orange,
-    secCelu: green,
-    secOfertas: aqua,
-);
-
-.cont4{
-    height: 150px;
-    background-color: map-get($contColores, secOfertas);
-}
-
-/*Extend - Herencia*/
-.cont5{
-    @extend .cont4;
-    border-bottom: solid 4px red;
-
-}
-
-/*Mixin*/
 @mixin medidasFotos($ancho, $alto){
     height: $alto;
     width: $ancho;
-}
-
-.contFoto{
-    @include medidasFotos( 350px, 400px);
-    border: solid 4px red;
 }
